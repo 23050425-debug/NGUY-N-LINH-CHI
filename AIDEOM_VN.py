@@ -22,8 +22,8 @@ HEAD
     ("Tab 10: Quy hoach ngau nhien", tab10.render),
     ("Tab 11: Hoc Tang Cuong", tab11.render),
     ("Tab 12: Tich hop", tab12.render),
-=======
->>>>>>> b776083181049d6df8fa0054462b01e4f9e6a7ef
+
+
 ]
 
 
