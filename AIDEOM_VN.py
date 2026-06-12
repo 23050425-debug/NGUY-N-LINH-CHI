@@ -1,4 +1,4 @@
-import streamlit as st
+﻿import streamlit as st
 
 from app_config import APP_SUBTITLE, APP_TITLE
 from data_loader import load_data
@@ -9,7 +9,7 @@ from ui_theme import apply_theme, configure_page
 # ĐĂNG KÝ TẤT CẢ CÁC TAB TẠI ĐÂY
 # Cấu trúc: ("Tên tab hiển thị trên menu", hàm_render_từ_module)
 LESSONS = [
-<<<<<<< HEAD
+HEAD
     ("Tab 1: Cobb-Douglas", tab1.render),
     ("Tab 2: Ngan sach so", tab2.render),
     ("Tab 3: Uu tien Nganh", tab3.render),
