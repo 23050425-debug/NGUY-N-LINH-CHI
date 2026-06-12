@@ -1,6 +1,5 @@
 import streamlit as st
 
-from app_config import APP_SUBTITLE, APP_TITLE
 from data_loader import load_data
 import tab1
 import tab2
