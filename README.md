@@ -1,4 +1,4 @@
-**# 🇳 AIDEOM-VN: Mô hình Tối ưu hóa Kinh tế Dẫn dắt bởi AI cho Việt Nam
+**AIDEOM-VN: Mô hình Tối ưu hóa Kinh tế Dẫn dắt bởi AI cho Việt Nam
 **AIDEOM-VN (AI-Driven Economic Optimization Model for Vietnam)** là hệ thống Dashboard điều hành và hỗ trợ ra quyết định định lượng, nhằm hoạch định chiến lược phát triển kinh tế Việt Nam đến năm 2030 trong bối cảnh chuyển đổi số và kỷ nguyên Trí tuệ nhân tạo (AI). 
 
 Hệ thống tích hợp 6 module tính toán cốt lõi (từ dự báo vĩ mô, đánh giá sẵn sàng số, tối ưu ngân sách, mô phỏng lao động đến kiểm soát rủi ro) và trực quan hóa qua giao diện web động, giúp lượng hóa các đánh đổi chính sách và đề xuất kịch bản phát triển bền vững.
