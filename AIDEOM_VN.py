@@ -2,23 +2,36 @@ import streamlit as st
 
 from app_config import APP_SUBTITLE, APP_TITLE
 from data_loader import load_data
-from tabs import tab1, tab10, tab11, tab12, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9
+import tab1
+import tab2
+import tab3
+import tab4
+import tab5
+import tab6
+import tab7
+import tab8
+import tab9
+import tab10
+import tab11
+import tab12
 from ui_theme import apply_theme, configure_page
 
 
+# ĐĂNG KÝ TẤT CẢ CÁC TAB TẠI ĐÂY
+# Cấu trúc: ("Tên tab hiển thị trên menu", hàm_render_từ_module)
 LESSONS = [
-    ("Bài 1: Cobb-Douglas", tab1.render),
-    ("Bài 2: Ngân sách số", tab2.render),
-    ("Bài 3: Ưu tiên Ngành", tab3.render),
-    ("Bài 4: Quy hoạch Ngành-Vùng", tab4.render),
-    ("Bài 5: MIP Quy hoạch", tab5.render),
-    ("Bài 6: TOPSIS", tab6.render),
-    ("Bài 7: Pareto", tab7.render),
-    ("Bài 8: Tối ưu Động", tab8.render),
-    ("Bài 9: Lao động & AI", tab9.render),
-    ("Bài 10: Quy hoạch ngẫu nhiên", tab10.render),
-    ("Bài 11: Học Tăng Cường", tab11.render),
-    ("Bài 12: Tích hợp", tab12.render),
+    ("Tab 1: Cobb-Douglas", tab1.render),
+    ("Tab 2: Ngan sach so", tab2.render),
+    ("Tab 3: Uu tien Nganh", tab3.render),
+    ("Tab 4: Quy hoach Nganh-Vung", tab4.render),
+    ("Tab 5: MIP Quy hoach", tab5.render),
+    ("Tab 6: TOPSIS", tab6.render),
+    ("Tab 7: Pareto", tab7.render),
+    ("Tab 8: Toi uu Dong", tab8.render),
+    ("Tab 9: Lao dong & AI", tab9.render),
+    ("Tab 10: Quy hoach ngau nhien", tab10.render),
+    ("Tab 11: Hoc Tang Cuong", tab11.render),
+    ("Tab 12: Tich hop", tab12.render),
 ]
 
 
@@ -95,5 +108,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
