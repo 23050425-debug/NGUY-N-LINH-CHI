@@ -9,6 +9,7 @@ from ui_theme import apply_theme, configure_page
 # ĐĂNG KÝ TẤT CẢ CÁC TAB TẠI ĐÂY
 # Cấu trúc: ("Tên tab hiển thị trên menu", hàm_render_từ_module)
 LESSONS = [
+<<<<<<< HEAD
     ("Tab 1: Cobb-Douglas", tab1.render),
     ("Tab 2: Ngan sach so", tab2.render),
     ("Tab 3: Uu tien Nganh", tab3.render),
@@ -21,6 +22,8 @@ LESSONS = [
     ("Tab 10: Quy hoach ngau nhien", tab10.render),
     ("Tab 11: Hoc Tang Cuong", tab11.render),
     ("Tab 12: Tich hop", tab12.render),
+=======
+>>>>>>> b776083181049d6df8fa0054462b01e4f9e6a7ef
 ]
 
 
