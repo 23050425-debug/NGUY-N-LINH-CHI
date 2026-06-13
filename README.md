@@ -47,9 +47,9 @@ Hệ thống mô phỏng 5 kịch bản đầu tư đến năm 2030, phơi bày 
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | **S1. Truyền thống** | 51,730 | 0.633 | 21.088 | Trung bình | 14,800 |
 | **S2. Số hóa nhanh** | 55,458 | 0.693 | 10.572 | Trung bình | 15,712 |
-| **S3. AI dẫn dắt** | **58,786** ⭐ | **0.873** ⚠️ | 17.882 | **Cao nhất** ⚠️ | 16,236 |
-| **S4. Bao trùm số** | 53,962 | **0.095** ✅ | **9.388** ✅ | Thấp | 15,635 |
-| **S5. Tối ưu cân bằng**| 53,660 | 0.393 | 12.572 | Trung bình | **16,238** 🏆 |
+| **S3. AI dẫn dắt** | **58,786**  | **0.873**  | 17.882 | **Cao nhất**  | 16,236 |
+| **S4. Bao trùm số** | 53,962 | **0.095**  | **9.388**  | Thấp | 15,635 |
+| **S5. Tối ưu cân bằng**| 53,660 | 0.393 | 12.572 | Trung bình | **16,238**  |
 
 > 💡 **Cảnh báo trực tiếp từ Hệ thống (M5):**
 > *   **Kịch bản S3 (AI dẫn dắt):** Đạt GDP ngắn hạn cao nhất nhưng đi kèm bất bình đẳng nghiêm trọng và rủi ro an ninh dữ liệu ở mức báo động. Bắt buộc phải bổ sung ngân sách an ninh mạng tối thiểu 15%.
