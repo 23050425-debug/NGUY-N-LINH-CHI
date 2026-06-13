@@ -1,101 +1,102 @@
-**AIDEOM-VN: Mô hình Tối ưu hóa Kinh tế Dẫn dắt bởi AI cho Việt Nam
-**AIDEOM-VN (AI-Driven Economic Optimization Model for Vietnam)** là hệ thống Dashboard điều hành và hỗ trợ ra quyết định định lượng, nhằm hoạch định chiến lược phát triển kinh tế Việt Nam đến năm 2030 trong bối cảnh chuyển đổi số và kỷ nguyên Trí tuệ nhân tạo (AI). 
+<p align="center">
+  <h1 align="center">🇻🇳 AIDEOM-VN</h1>
+  <p align="center"><i>Mô hình Tối ưu hóa Kinh tế Dẫn dắt bởi AI cho Việt Nam</i></p>
+  <p align="center"><b>Dashboard điều hành phát triển kinh tế Việt Nam trong kỷ nguyên AI</b></p>
+</p>
 
-Hệ thống tích hợp 6 module tính toán cốt lõi (từ dự báo vĩ mô, đánh giá sẵn sàng số, tối ưu ngân sách, mô phỏng lao động đến kiểm soát rủi ro) và trực quan hóa qua giao diện web động, giúp lượng hóa các đánh đổi chính sách và đề xuất kịch bản phát triển bền vững.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.9+-blue?logo=python" alt="Python">
+  <img src="https://img.shields.io/badge/Streamlit-Dashboard-red?logo=streamlit" alt="Streamlit">
+  <img src="https://img.shields.io/badge/Optimization-PuLP%20%7C%20CVXPY%20%7C%20NSGA--II-green" alt="Optimization">
+  <img src="https://img.shields.io/badge/License-MIT-yellow" alt="License">
+</p>
 
----
-
-## 📑 Mục lục
-- [1. Tổng quan Hệ thống](#1-tổng-quan-hệ-thống)
-- [2. Kiến trúc 6 Module cốt lõi (M1 - M6)](#2-kiến-trúc-6-module-cốt-lõi-m1---m6)
-- [3. 5 Kịch bản Chính sách & Kết quả Nổi bật](#3-5-kịch-bản-chính-sách--kết-quả-nổi-bật)
-- [4. Các Phát hiện & Hàm ý Chính sách Trọng tâm](#4-các-phát-hiện--hàm-ý-chính-sách-trọng-tâm)
-- [5. Hướng dẫn Cài đặt & Chạy thử nghiệm](#5-hướng-dẫn-cài-đặt--chạy-thử-nghiệm)
-- [6. Cấu trúc Thư mục](#6-cấu-trúc-thư-mục)
-- [7. Nguồn Dữ liệu Chính thức](#7-nguồn-dữ-liệu-chính-thức)
-- [8. Đề xuất Mở rộng Nghiên cứu](#8-đề-xuất-mở-rộng-nghiên-cứu)
-- [9. Thông tin Tác giả](#9-thông-tin-tác-giả)
-
----
-
-## 1. Tổng quan Hệ thống
-AIDEOM-VN giải quyết bài toán đánh đổi phức tạp giữa **Tăng trưởng kinh tế (GDP)**, **Bất bình đẳng vùng miền (Gini)**, **Phát thải môi trường (CO2)** và **An ninh mạng (Cyber Risk)**. Hệ thống cho phép các nhà hoạch định chính sách thử nghiệm 5 kịch bản chiến lược và xem xét tác động đa chiều đến năm 2030, chuyển đổi dữ liệu thô thành các khuyến nghị định lượng.
+<p align="center">
+  🚀 <b>Trải nghiệm Dashboard trực tuyến tại:</b><br>
+  <a href="https://nguy-n-linh-chi-t2zyyyanmmsk8xujes93rt.streamlit.app/"><b>https://nguy-n-linh-chi-t2zyyyanmmsk8xujes93rt.streamlit.app/</b></a>
+</p>
 
 ---
 
-## 2. Kiến trúc 6 Module cốt lõi (M1 - M6)
+### 🌟 TỔNG QUAN HỆ THỐNG (OVERVIEW)
 
-Hệ thống được thiết kế theo luồng xử lý dữ liệu khép kín:
+**AIDEOM-VN** *(AI-Driven Economic Optimization Model for Vietnam)* không chỉ là một công cụ dự báo, mà là một **khung ra quyết định định lượng toàn diện**, được thiết kế để lượng hóa các đánh đổi chính sách phức tạp trong quá trình chuyển đổi số và phát triển kinh tế Việt Nam đến năm 2030. 
 
-| Module | Tên Module | Chức năng Chính | Phương pháp / Mô hình | Kết quả Nổi bật |
-| :--- | :--- | :--- | :--- | :--- |
-| **M1** | Dự báo Kinh tế | Ước lượng TFP, dự báo GDP 2026-2030 | Hàm Cobb-Douglas mở rộng (5 yếu tố) | TFP tăng từ 32.54 (2020) lên 40.94 (2025). MAPE dự báo chỉ 6.46%. |
-| **M2** | Sẵn sàng Số | Xếp hạng 6 vùng kinh tế theo ưu tiên đầu tư AI | TOPSIS (Trọng số Chuyên gia & Entropy) | Đông Nam Bộ và Đồng bằng sông Hồng dẫn đầu. |
-| **M3** | Phân bổ Ngân sách | Tối ưu hóa ngân sách số theo Ngành & Vùng | Linear Programming (LP), Stochastic Programming | Xác định cấu trúc phân bổ hiệu quả biên cao, kiểm soát sàn/trần. |
-| **M4** | Tác động Lao động | Mô phỏng việc làm ròng (NetJob) trước tự động hóa | Mô hình dịch chuyển lao động & Đào tạo lại | Ngành Giáo dục - Đào tạo tạo ra 1,265,000 việc làm ròng lớn nhất. |
-| **M5** | Đánh giá Rủi ro | Radar rủi ro đa chiều & Biên Pareto | NSGA-II (Đa mục tiêu), Minimax Regret | Cảnh báo rủi ro Cyber ở S3 và bất bình đẳng ở S2. |
-| **M6** | Dashboard Ra QĐ | Trực quan hóa & Khuyến nghị chính sách | Streamlit, Plotly, Pandas | Tổng hợp thành giao diện điều hành 12 tab. |
+Thay vì phân tích rời rạc, AIDEOM-VN tích hợp **6 module tính toán cốt lõi (M1 - M6)** thành một luồng xử lý dữ liệu khép kín. Hệ thống cho phép các nhà hoạch định chính sách thử nghiệm **5 kịch bản chiến lược** (Truyền thống, Số hóa nhanh, AI dẫn dắt, Bao trùm số, Tối ưu cân bằng) và đánh giá tác động đa chiều lên 4 trụ cột: **Tăng trưởng (GDP) – Bất bình đẳng (Gini) – Phát thải (CO2) – An ninh mạng (Cyber Risk)**.
 
 ---
 
-## 3. 5 Kịch bản Chính sách & Kết quả Nổi bật
+### 🏗️ KIẾN TRÚC 6 MODULE CỐT LÕI (M1 - M6)
 
-Hệ thống mô phỏng 5 kịch bản đầu tư đến năm 2030 với các chỉ số KPI chính:
+Hệ thống được thiết kế theo kiến trúc module hóa, trong đó đầu ra của module trước là đầu vào của module sau, tạo thành một chuỗi logic chặt chẽ từ vĩ mô đến vi mô:
 
-| Kịch bản | GDP Gain (tỷ VND) | Gini Index (Bất bình đẳng) | Phát thải CO2 | Rủi ro Cyber |
-| :--- | :---: | :---: | :---: | :---: |
-| **S1. Truyền thống** | 51,730 | 0.6333 | 21.088 | Trung bình |
-| **S2. Số hóa nhanh** | 55,458 | 0.6933 | 10.572 | Trung bình |
-| **S3. AI dẫn dắt** | 58,786 *(Cao nhất)* | 0.8733 *(Cao nhất)* | 17.882 | **Cao nhất** ⚠️ |
-| **S4. Bao trùm số** | 53,962 | **0.0957** *(Thấp nhất)* | **9.388** *(Thấp nhất)* | Thấp |
-| **S5. Tối ưu cân bằng** | 53,660 | 0.3933 | 12.572 | Trung bình |
-
-> **📊 Cảnh báo từ Module M5:**
-> *   **Kịch bản S3 (AI dẫn dắt):** Có rủi ro An ninh mạng (Cyber) cao nhất, bắt buộc phải bổ sung ngân sách an ninh dữ liệu.
-> *   **Kịch bản S4 (Bao trùm số):** Kiểm soát bất bình đẳng vùng miền tốt nhất, phù hợp với mục tiêu bao trùm của Chính phủ.
-> *   **Vùng có AI Readiness thấp:** Cần ưu tiên hạ tầng số và nhân lực số trước khi mở rộng AI quy mô lớn.
+*   📈 **M1. Dự báo Kinh tế:** Sử dụng hàm Cobb-Douglas mở rộng với 5 yếu tố (Vốn, Lao động, Số hóa, AI, Nhân lực) để ước lượng Năng suất nhân tố tổng hợp (TFP) và dự báo quỹ đạo GDP 2026-2030.
+*   🗺️ **M2. Đánh giá Sẵn sàng Số:** Xếp hạng 6 vùng kinh tế trọng điểm theo mức độ ưu tiên đầu tư AI bằng phương pháp TOPSIS, kết hợp đối chiếu giữa trọng số Chuyên gia và Entropy khách quan.
+*   💰 **M3. Tối ưu Phân bổ Ngân sách:** Ứng dụng Quy hoạch tuyến tính (LP) và Quy hoạch ngẫu nhiên 2 giai đoạn để phân bổ ngân sách chuyển đổi số theo ma trận Ngành - Vùng dưới các ràng buộc công bằng và hiệu quả.
+*   👥 **M4. Mô phỏng Lao động:** Lượng hóa việc làm ròng (NetJob) trước tác động của tự động hóa và đào tạo lại trên 8 ngành kinh tế, xác định các "điểm nghẽn" nhân lực.
+*   🛡️ **M5. Kiểm soát Rủi ro:** Xây dựng Radar rủi ro 4 chiều và tìm nghiệm thỏa hiệp trên biên Pareto (sử dụng thuật toán di truyền NSGA-II) để cân bằng giữa tăng trưởng và bền vững.
+*   💻 **M6. Dashboard Ra quyết định:** Tổng hợp và trực quan hóa toàn bộ kết quả từ M1-M5 thành giao diện điều hành tương tác, cung cấp các khuyến nghị chính sách tức thì.
 
 ---
 
-## 4. Các Phát hiện & Hàm ý Chính sách Trọng tâm
+### ⚖️ BỨC TRANH ĐÁNH ĐỔI: 5 KỊCH BẢN CHÍNH SÁCH
 
-1.  **Không có tăng trưởng miễn phí:** Kịch bản S5 (Tối ưu cân bằng) cho GDP 2030 cao nhất (16,238.4 nghìn tỷ VND), nhưng cần được kiểm soát bằng lớp ràng buộc rủi ro và an sinh. Theo đuổi tăng trưởng cực đoan (S3) sẽ để lại hệ quả bất bình đẳng nghiêm trọng.
-2.  **Nhân lực số là điều kiện nền:** Kết quả M4 cho thấy đào tạo lại và nâng cấp kỹ năng tạo ra phần lớn NetJob ròng, đặc biệt ở các ngành dịch vụ công và tri thức (Giáo dục tạo ra >1.2 triệu việc làm). Nhân lực số là lớp đệm quan trọng khi tự động hóa tăng tốc.
-3.  **Ràng buộc toán học định hình dòng ngân sách:** Các ràng buộc sàn/trần và đa dạng hóa trong M3 làm ngân sách lan tỏa hơn, giảm nguy cơ tập trung quá mức vào một số ít ngành/vùng có tốc độ tăng trưởng nhanh.
-4.  **Kịch bản cân bằng là phương án điều hành tối ưu:** Theo điểm tổng hợp GDP - Gini - Cyber, **S4 (Bao trùm số)** là lựa chọn có hồ sơ rủi ro cân đối hơn để triển khai trong thực tế, đảm bảo phát triển bền vững.
+Hệ thống mô phỏng 5 kịch bản đầu tư đến năm 2030, phơi bày những đánh đổi sâu sắc giữa các mục tiêu kinh tế - xã hội - môi trường:
+
+| Kịch bản | Tăng trưởng GDP (nghìn tỷ) | Bất bình đẳng (Gini) | Phát thải CO2 | Rủi ro An ninh mạng | GDP Dự báo 2030 |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **S1. Truyền thống** | 51,730 | 0.633 | 21.088 | Trung bình | 14,800 |
+| **S2. Số hóa nhanh** | 55,458 | 0.693 | 10.572 | Trung bình | 15,712 |
+| **S3. AI dẫn dắt** | **58,786** ⭐ | **0.873** ⚠️ | 17.882 | **Cao nhất** ⚠️ | 16,236 |
+| **S4. Bao trùm số** | 53,962 | **0.095** ✅ | **9.388** ✅ | Thấp | 15,635 |
+| **S5. Tối ưu cân bằng**| 53,660 | 0.393 | 12.572 | Trung bình | **16,238** 🏆 |
+
+> 💡 **Cảnh báo trực tiếp từ Hệ thống (M5):**
+> *   **Kịch bản S3 (AI dẫn dắt):** Đạt GDP ngắn hạn cao nhất nhưng đi kèm bất bình đẳng nghiêm trọng và rủi ro an ninh dữ liệu ở mức báo động. Bắt buộc phải bổ sung ngân sách an ninh mạng tối thiểu 15%.
+> *   **Kịch bản S4 (Bao trùm số):** Kiểm soát bất bình đẳng vùng miền và phát thải xuất sắc, là lựa chọn tối ưu cho các mục tiêu phát triển bền vững (SDGs) và cam kết COP26.
+> *   **Vùng yếu kém:** Các vùng có *AI Readiness* thấp (Tây Nguyên, ĐBSCL, TD&MNPB) cần ưu tiên hạ tầng và nhân lực số trước khi mở rộng AI quy mô lớn.
 
 ---
 
-## 5. Hướng dẫn Cài đặt & Chạy thử nghiệm
-### Yêu cầu hệ thống
-*   Python 3.9 hoặc cao hơn.
-*   Git.
-### Các bước thiết lập
-Mở Terminal / Command Prompt và thực hiện các lệnh sau:
+### 🔑 CÁC PHÁT HIỆN & HÀM Ý CHÍNH SÁCH CỐT LÕI
 
+Từ hàng nghìn kịch bản mô phỏng, AIDEOM-VN rút ra 4 nguyên tắc vàng cho hoạch định chính sách chuyển đổi số:
+
+1.  🚫 **Không có tăng trưởng miễn phí:** 
+    Kịch bản *Tối ưu cân bằng (S5)* cho GDP 2030 cao nhất (16,238 nghìn tỷ VND), nhưng cần được kiểm soát bằng lớp ràng buộc rủi ro. Theo đuổi tăng trưởng cực đoan (S3) sẽ để lại hệ quả bất bình đẳng nghiêm trọng, kìm hãm động lực dài hạn.
+2.  🎓 **Nhân lực số là điều kiện nền, không phải chi phí:** 
+    Kết quả từ M4 chỉ ra rằng đào tạo lại (đặc biệt trong khối Giáo dục - Đào tạo) tạo ra lượng việc làm ròng lớn gấp hàng chục lần so với đầu tư hạ tầng đơn thuần. Chính sách nhân lực số đóng vai trò là "lớp đệm" quan trọng nhất khi tự động hóa tăng tốc.
+3.  📐 **Ràng buộc toán học định hình dòng ngân sách:** 
+    Các ràng buộc công bằng vùng miền (sàn/trần) làm ngân sách lan tỏa hơn, giảm nguy cơ tập trung quá mức vào các vùng trọng điểm (Đông Nam Bộ, ĐBSH). Chi phí kinh tế của sự công bằng (~12% GDP) là hoàn toàn chấp nhận được so với lợi ích ổn định chính trị - xã hội.
+4.  ⚖️ **Kịch bản cân bằng là phương án điều hành tối ưu:** 
+    Theo điểm tổng hợp đa chiều (GDP - Gini - Cyber), **S4 (Bao trùm số)** và **S5 (Tối ưu cân bằng)** là hai phương án có hồ sơ rủi ro cân đối nhất để triển khai trong thực tế, đảm bảo Việt Nam không bị tụt hậu nhưng cũng không bỏ lại ai phía sau.
+
+---
+
+### 🛠️ CÔNG NGHỆ & CÀI ĐẶT
+
+**Tech Stack:**
+`Python` • `Streamlit` • `Pandas` • `NumPy` • `Plotly` • `PuLP` • `CVXPY` • `SciPy` • `Pymoo (NSGA-II)` • `Gymnasium (Q-Learning)`
+
+**Chạy thử nghiệm trên máy local:**
 ```bash
-# 1. Clone repository về máy
-git clone https://github.com/[TEN_GITHUB_CUA_BAN]/AIDEOM-VN.git
-cd AIDEOM-VN
+# 1. Clone repository
+git clone https://github.com/23050425-debug/NGUY-N-LINH-CHI.git
+cd NGUY-N-LINH-CHI
 
-# 2. Tạo môi trường ảo (Khuyến nghị)
-python -m venv venv
-# Trên Windows:
-venv\Scripts\activate
-# Trên macOS/Linux:
-source venv/bin/activate
-# 3. Cài đặt các thư viện cần thiết
+# 2. Cài đặt thư viện
 pip install -r requirements.txt
-# 4. Chạy Dashboard
-streamlit run AIDEOM_VN.py
 
-# Cấu trúc thư mục
-AIDEOM-VN/
-├── AIDEOM_VN.py          # File điều hướng chính (Main App)
-├── app_config.py         # Cấu hình giao diện, theme
-├── data_loader.py        # Module nạp và làm sạch dữ liệu
-├── ui_theme.py           # Tùy biến CSS, màu sắc Dashboard
-├── requirements.txt      # Danh sách thư viện Python
-├── tab1.py đến tab12.py  # 12 Module phân tích chi tiết
-├── data/                 # Thư mục chứa dữ liệu thô (CSV)
-└── README.md             # Tài liệu hướng dẫn này**
+# 3. Khởi chạy Dashboard
+streamlit run AIDEOM_VN.py
+```
+
+---
+
+### 📚 DỮ LIỆU & NGUỒN THAM KHẢO
+
+Hệ thống được xây dựng và chuẩn hóa dựa trên các nguồn dữ liệu chính thống giai đoạn 2020-2025:
+*   **Trong nước:** Tổng cục Thống kê (GSO), Bộ KH&CN, Bộ TT&TT, Bộ KH&ĐT.
+*   **Quốc tế:** World Bank (WDI), OECD.Stat, WIPO (GII 2025), Stanford HAI (AI Index), IMF, UN Comtrade, Codex.
+
+---
